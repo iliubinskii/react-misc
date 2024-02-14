@@ -1,0 +1,1 @@
+{"version":3,"file":"useProxyRef.js","sourceRoot":"","sources":["../../../src/hooks/ref-hooks/useProxyRef.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAE/B;;;;;GAKG;AACH,MAAM,UAAU,WAAW,CAAI,KAAQ;IACrC,MAAM,GAAG,GAAG,KAAK,CAAC,MAAM,CAAC,KAAK,CAAC,CAAC;IAEhC,GAAG,CAAC,OAAO,GAAG,KAAK,CAAC;IAEpB,OAAO,GAAG,CAAC;AACb,CAAC"}
