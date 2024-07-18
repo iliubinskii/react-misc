@@ -1,11 +1,10 @@
-import * as React from "react";
+import React from "react";
 import { consts } from "../core";
 import { useDatetime } from "../contexts";
 import { useInterval } from "../hooks";
 
 /**
  * Current time hook.
- *
  * @returns Current time.
  */
 export function useCurrentTime(): string {

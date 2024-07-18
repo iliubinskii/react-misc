@@ -4,7 +4,6 @@ import type { faker } from "typescript-misc";
 export declare const FakerProvider: import("../types").FunctionComponent<Props>;
 /**
  * Consumes faker context.
- *
  * @returns Faker context.
  */
 export declare function useFaker(): faker.Facade;

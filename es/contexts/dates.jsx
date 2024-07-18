@@ -1,5 +1,5 @@
-import * as React from "react";
 import { TimeUnit, dateFnsWrapper, neverDemand } from "typescript-misc";
+import React from "react";
 import { memo } from "../functions";
 export const DatesProvider = memo("DatesProvider", ({ children, locale, weekStartsOn }) => {
     const datetime = React.useMemo(() => dateFnsWrapper({ locale }), [locale]);
@@ -31,7 +31,6 @@ export const DatesProvider = memo("DatesProvider", ({ children, locale, weekStar
 });
 /**
  * Consumes dates context.
- *
  * @returns Dates context.
  */
 export function useDates() {

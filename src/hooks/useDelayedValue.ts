@@ -3,7 +3,6 @@ import { useState } from "./state-hooks";
 
 /**
  * Delayed value hook.
- *
  * @param value - Value.
  * @param timeout - Timeout.
  * @param immediate - A list of values that should be set immediately.

@@ -1,18 +1,8 @@
-import * as React from "react";
 import { dictionary, neverDemand } from "typescript-misc";
 import type { CommonProps } from "../types";
+import React from "react";
 import type { lang } from "typescript-misc";
 import { memo } from "../functions";
-
-declare global {
-  namespace facades {
-    namespace lang {
-      interface Context {
-        readonly SampleContext: true;
-      }
-    }
-  }
-}
 
 export const LangProvider = memo(
   "LangProvider",
@@ -30,7 +20,6 @@ export const LangProvider = memo(
 
 /**
  * Consumes lang context.
- *
  * @returns Lang context.
  */
 export function useLang<

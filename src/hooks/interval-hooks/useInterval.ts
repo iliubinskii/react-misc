@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useResource } from "../common-hooks";
 
 /**
  * Interval hook.
- *
  * @param callback - Callback.
  * @param deps - Dependencies.
  * @param interval - Interval.

@@ -1,6 +1,6 @@
-import * as React from "react";
 import { fn, neverDemand } from "typescript-misc";
 import type { CommonProps } from "../types";
+import React from "react";
 import { consts } from "../core";
 import { memo } from "../functions";
 import type { strings } from "typescript-misc";
@@ -20,10 +20,9 @@ export const LoggerProvider = memo(
       [logger]
     );
 
-    const context = React.useMemo(
-      (): Context => ({ getMessages, log }),
-      [getMessages, log]
-    );
+    const context = React.useMemo((): Context => {
+      return { getMessages, log };
+    }, [getMessages, log]);
 
     return (
       <LoggerContext.Provider value={context}>
@@ -35,7 +34,6 @@ export const LoggerProvider = memo(
 
 /**
  * Consumes logger context.
- *
  * @returns Logger context.
  */
 export function useLogger(): Context {
@@ -48,13 +46,11 @@ export function useLogger(): Context {
 export interface Context {
   /**
    * Returns messages.
-   *
    * @returns Messages.
    */
   readonly getMessages: () => strings;
   /**
    * Adds messages to the log.
-   *
    * @param messages - Messages.
    */
   readonly log: (...messages: strings) => void;
@@ -66,7 +62,6 @@ export interface Context {
 export interface Props extends CommonProps.Children {
   /**
    * External logger.
-   *
    * @param messages - Messages.
    */
   readonly logger?: ((...messages: strings) => void) | undefined;

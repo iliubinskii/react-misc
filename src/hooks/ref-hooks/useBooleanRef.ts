@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 
 /**
  * Boolean ref hook.
- *
  * @param initialValue - Initial value.
  * @returns Boolean ref.
  */
@@ -60,7 +59,6 @@ export interface Toggle {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple = readonly [
   Readonly<React.MutableRefObject<boolean>>,
   SetTrue,

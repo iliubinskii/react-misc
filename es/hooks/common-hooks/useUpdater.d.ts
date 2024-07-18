@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Updater hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  */

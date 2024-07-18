@@ -1,29 +1,28 @@
-import * as React from "react";
+import React from "react";
+import type { booleanU } from "typescript-misc";
 /**
  * Boolean hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful boolean value.
  */
 export declare function useBooleanConfig(configFactory: () => Config, deps: React.DependencyList): Tuple;
 export interface Config {
-    readonly initialState?: boolean;
+    readonly initialState?: booleanU;
     /**
      * Handles "OnSet" event.
-     *
      * @param value - Value.
      */
-    readonly onSet?: (value: boolean) => void;
+    readonly onSet?: ((value: boolean) => void) | undefined;
     /**
      * Handles "OnSetFalse" event.
      */
-    readonly onSetFalse?: () => void;
+    readonly onSetFalse?: (() => void) | undefined;
     /**
      * Handles "OnSetTrue" event.
      */
-    readonly onSetTrue?: () => void;
-    readonly resetOnInitialStateChange?: boolean;
+    readonly onSetTrue?: (() => void) | undefined;
+    readonly resetOnInitialStateChange?: booleanU;
 }
 /**
  * @internal

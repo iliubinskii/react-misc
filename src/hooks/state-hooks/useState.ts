@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { is } from "typescript-misc";
 
 /**
  * State hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful value.
  */
@@ -45,7 +44,6 @@ export interface ResetState {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple<T> = readonly [
   T,
   React.Dispatch<React.SetStateAction<T>>,

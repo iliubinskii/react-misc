@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useBusyState = exports.BusyStateProvider = void 0;
+exports.BusyStateProvider = void 0;
+exports.useBusyState = useBusyState;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 const functions_1 = require("../functions");
 exports.BusyStateProvider = (0, functions_1.memo)("BusyStateProvider", ({ busy, children }) => {
     const previousBusy = useBusyState();
@@ -12,12 +13,10 @@ exports.BusyStateProvider = (0, functions_1.memo)("BusyStateProvider", ({ busy, 
 });
 /**
  * Consumes busy state context.
- *
  * @returns Busy state.
  */
 function useBusyState() {
-    return React.useContext(BusyStateContext);
+    return react_1.default.useContext(BusyStateContext);
 }
-exports.useBusyState = useBusyState;
-const BusyStateContext = React.createContext(false);
+const BusyStateContext = react_1.default.createContext(false);
 //# sourceMappingURL=busy-state.jsx.map

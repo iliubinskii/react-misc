@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Boolean hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful boolean value.
  */
@@ -67,7 +66,6 @@ export interface Toggle {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple = readonly [
   boolean,
   SetTrue,

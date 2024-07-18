@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Async interval hook.
- *
  * @param async - Async callback.
  * @param deps - Dependencies.
  * @param interval - Interval.

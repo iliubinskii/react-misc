@@ -1,17 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useExecutionTimeLogger = void 0;
+exports.useExecutionTimeLogger = useExecutionTimeLogger;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 const contexts_1 = require("../contexts");
 /**
  * Execution time logger hook.
- *
  * @returns Execution time logger.
  */
 function useExecutionTimeLogger() {
     const { log } = (0, contexts_1.useLogger)();
-    return React.useCallback(message => {
+    return react_1.default.useCallback(message => {
         let done = false;
         const t1 = Date.now();
         return () => {
@@ -27,5 +26,4 @@ function useExecutionTimeLogger() {
         };
     }, [log]);
 }
-exports.useExecutionTimeLogger = useExecutionTimeLogger;
 //# sourceMappingURL=useExecutionTimeLogger.js.map

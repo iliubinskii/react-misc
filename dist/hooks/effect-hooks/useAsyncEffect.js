@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useAsyncEffect = void 0;
+exports.useAsyncEffect = useAsyncEffect;
 const common_hooks_1 = require("../common-hooks");
 /**
  * Async effect hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  */
@@ -14,5 +13,4 @@ function useAsyncEffect(effect, deps) {
         effect();
     }, deps);
 }
-exports.useAsyncEffect = useAsyncEffect;
 //# sourceMappingURL=useAsyncEffect.js.map

@@ -1,11 +1,10 @@
-import * as React from "react";
-import type { IndexedRecord, Rec } from "typescript-misc";
+import type { IndexedRecord, Rec, booleanU } from "typescript-misc";
 import { fn, o } from "typescript-misc";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Enumeration hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful enumeration value.
@@ -92,11 +91,10 @@ export interface Config<T extends string> {
   readonly initialState: T;
   /**
    * Handles "OnSet" event.
-   *
    * @param state - State.
    */
-  readonly onSet?: (state: T) => void;
-  readonly resetOnInitialStateChange?: boolean;
+  readonly onSet?: ((state: T) => void) | undefined;
+  readonly resetOnInitialStateChange?: booleanU;
 }
 
 /**
@@ -125,7 +123,6 @@ export interface SetEnumStateNoEvent {
 export interface SetEnumStateToValue<T extends string> {
   /**
    * Sets state to a value.
-   *
    * @param value - Value.
    */
   (value: T): void;
@@ -137,7 +134,6 @@ export interface SetEnumStateToValue<T extends string> {
 export interface SetEnumStateToValueNoEvent<T extends string> {
   /**
    * Sets state to a value.
-   *
    * @param value - Value.
    */
   (value: T): void;
@@ -146,7 +142,6 @@ export interface SetEnumStateToValueNoEvent<T extends string> {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple<T extends string> = readonly [
   T,
   Rec<T, SetEnumState>,

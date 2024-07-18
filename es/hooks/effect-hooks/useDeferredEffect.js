@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 /**
  * Deferred effect hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  */

@@ -1,6 +1,6 @@
 import "react-native-get-random-values";
-import * as React from "react";
 import type { CommonProps } from "../types";
+import React from "react";
 import { memo } from "../functions";
 import { neverDemand } from "typescript-misc";
 
@@ -13,7 +13,6 @@ export const UniqueIdProvider = memo(
 
 /**
  * Consumes unique ID context.
- *
  * @returns Unique ID context.
  */
 export function useUniqueId(): Uuid {
@@ -33,7 +32,6 @@ export interface Props extends CommonProps.Children {
 export interface Uuid {
   /**
    * Generates unique ID.
-   *
    * @returns Unique ID.
    */
   (): string;

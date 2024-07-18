@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Async callback hook.
- *
  * @param async - Async callback.
  * @param deps - Dependencies.
  * @returns Sync function.

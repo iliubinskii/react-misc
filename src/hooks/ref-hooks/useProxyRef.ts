@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 
 /**
  * Proxy ref hook.
- *
  * @param value - Value.
  * @returns Ref.
  */

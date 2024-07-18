@@ -1,8 +1,7 @@
-import * as React from "react";
 import { useRealEffect, useResource } from "../common-hooks";
+import React from "react";
 /**
  * Delayed effect hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  * @param timeout - Timeout.

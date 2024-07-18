@@ -1,8 +1,7 @@
-import * as React from "react";
 import type { IndexedRecord, Rec } from "typescript-misc";
+import React from "react";
 /**
  * Enumeration hook.
- *
  * @param initialState - Initial state.
  * @param enumeration - Enumeration.
  * @returns Stateful enumeration value.
@@ -23,7 +22,6 @@ export interface SetEnumState {
 export interface SetEnumStateToValue<T extends string> {
     /**
      * Sets state to a value.
-     *
      * @param value - Value.
      */
     (value: T): void;

@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Decrementor hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful numeric value.
  */
@@ -39,7 +38,6 @@ export interface Decrementor {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple = readonly [
   number,
   Decrementor,

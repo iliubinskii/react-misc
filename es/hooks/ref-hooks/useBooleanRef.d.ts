@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Boolean ref hook.
- *
  * @param initialValue - Initial value.
  * @returns Boolean ref.
  */

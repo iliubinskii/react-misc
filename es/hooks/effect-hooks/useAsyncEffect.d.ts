@@ -1,7 +1,6 @@
-import type * as React from "react";
+import type React from "react";
 /**
  * Async effect hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  */

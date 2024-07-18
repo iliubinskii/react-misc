@@ -1,1 +1,1 @@
-{"version":3,"file":"useProxyRef.d.ts","sourceRoot":"","sources":["../../../src/hooks/ref-hooks/useProxyRef.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAC;AAE/B;;;;;GAKG;AACH,wBAAgB,WAAW,CAAC,CAAC,EAAE,KAAK,EAAE,CAAC,GAAG,QAAQ,CAAC,KAAK,CAAC,gBAAgB,CAAC,CAAC,CAAC,CAAC,CAM5E"}
+{"version":3,"file":"useProxyRef.d.ts","sourceRoot":"","sources":["../../../src/hooks/ref-hooks/useProxyRef.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B;;;;GAIG;AACH,wBAAgB,WAAW,CAAC,CAAC,EAAE,KAAK,EAAE,CAAC,GAAG,QAAQ,CAAC,KAAK,CAAC,gBAAgB,CAAC,CAAC,CAAC,CAAC,CAM5E"}

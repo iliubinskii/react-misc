@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { is } from "typescript-misc";
 /**
  * State hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful value.
  */

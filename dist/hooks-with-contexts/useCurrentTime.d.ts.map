@@ -1,1 +1,1 @@
-{"version":3,"file":"useCurrentTime.d.ts","sourceRoot":"","sources":["../../src/hooks-with-contexts/useCurrentTime.ts"],"names":[],"mappings":"AAKA;;;;GAIG;AACH,wBAAgB,cAAc,IAAI,MAAM,CAgBvC"}
+{"version":3,"file":"useCurrentTime.d.ts","sourceRoot":"","sources":["../../src/hooks-with-contexts/useCurrentTime.ts"],"names":[],"mappings":"AAKA;;;GAGG;AACH,wBAAgB,cAAc,IAAI,MAAM,CAgBvC"}

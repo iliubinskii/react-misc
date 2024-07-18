@@ -1,19 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useChangesLogger = void 0;
+exports.useChangesLogger = useChangesLogger;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 const contexts_1 = require("../contexts");
 /**
  * Changes logger hook.
- *
  * @param value - Value.
  * @param message - Message.
  * @returns Value.
  */
 function useChangesLogger(value, message) {
     const { log } = (0, contexts_1.useLogger)();
-    const ref = React.useRef(value);
+    const ref = react_1.default.useRef(value);
     if (value === ref.current) {
         // Did not change
     }
@@ -22,5 +21,4 @@ function useChangesLogger(value, message) {
     ref.current = value;
     return value;
 }
-exports.useChangesLogger = useChangesLogger;
 //# sourceMappingURL=useChangesLogger.js.map

@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useEnumConfig = void 0;
+exports.useEnumConfig = useEnumConfig;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
 const typescript_misc_1 = require("typescript-misc");
+const react_1 = tslib_1.__importDefault(require("react"));
 const common_hooks_1 = require("../common-hooks");
 /**
  * Enumeration hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful enumeration value.
@@ -15,10 +14,10 @@ const common_hooks_1 = require("../common-hooks");
 function useEnumConfig(configFactory, deps) {
     const { enumeration, initialState, onSet = typescript_misc_1.fn.noop, resetOnInitialStateChange = false } = 
     // eslint-disable-next-line react-hooks/exhaustive-deps -- Ok
-    React.useMemo(configFactory, deps);
-    const ref = React.useRef(initialState);
-    const [state, setState] = React.useState(initialState);
-    const setEnumState = React.useMemo(() => typescript_misc_1.o.map(enumeration, nextState => () => {
+    react_1.default.useMemo(configFactory, deps);
+    const ref = react_1.default.useRef(initialState);
+    const [state, setState] = react_1.default.useState(initialState);
+    const setEnumState = react_1.default.useMemo(() => typescript_misc_1.o.map(enumeration, nextState => () => {
         if (nextState === ref.current) {
             // Already set
         }
@@ -28,16 +27,16 @@ function useEnumConfig(configFactory, deps) {
             onSet(nextState);
         }
     }), [enumeration, onSet]);
-    const setEnumStateNoEvent = React.useMemo(() => typescript_misc_1.o.map(enumeration, nextState => () => {
+    const setEnumStateNoEvent = react_1.default.useMemo(() => typescript_misc_1.o.map(enumeration, nextState => () => {
         ref.current = nextState;
         setState(nextState);
     }), [enumeration]);
-    const setEnumStateToValue = React.useCallback((value) => {
+    const setEnumStateToValue = react_1.default.useCallback((value) => {
         ref.current = value;
         setState(value);
         onSet(value);
     }, [onSet]);
-    const setEnumStateToValueNoEvent = React.useCallback((value) => {
+    const setEnumStateToValueNoEvent = react_1.default.useCallback((value) => {
         ref.current = value;
         setState(value);
     }, []);
@@ -45,7 +44,7 @@ function useEnumConfig(configFactory, deps) {
         if (resetOnInitialStateChange)
             setState(initialState);
     }, [initialState]);
-    return React.useMemo(() => [
+    return react_1.default.useMemo(() => [
         state,
         setEnumState,
         setEnumStateToValue,
@@ -60,5 +59,4 @@ function useEnumConfig(configFactory, deps) {
         state
     ]);
 }
-exports.useEnumConfig = useEnumConfig;
 //# sourceMappingURL=useEnumConfig.js.map

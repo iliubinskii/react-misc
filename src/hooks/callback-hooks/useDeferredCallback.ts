@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Deferred callback hook.
- *
  * @param callback - Callback.
  * @returns Deferred callback.
  */

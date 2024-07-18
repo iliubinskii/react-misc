@@ -1,11 +1,10 @@
-import * as React from "react";
 import type { IndexedRecord, Rec } from "typescript-misc";
+import React from "react";
 import { o } from "typescript-misc";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Enumeration hook.
- *
  * @param initialState - Initial state.
  * @param enumeration - Enumeration.
  * @returns Stateful enumeration value.
@@ -56,7 +55,6 @@ export interface SetEnumState {
 export interface SetEnumStateToValue<T extends string> {
   /**
    * Sets state to a value.
-   *
    * @param value - Value.
    */
   (value: T): void;
@@ -65,7 +63,6 @@ export interface SetEnumStateToValue<T extends string> {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple<T extends string> = readonly [
   T,
   Rec<T, SetEnumState>,

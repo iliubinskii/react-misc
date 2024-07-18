@@ -1,6 +1,6 @@
 import "react-native-get-random-values";
-import * as React from "react";
 import type { CommonProps } from "../types";
+import React from "react";
 import type { faker } from "typescript-misc";
 import { memo } from "../functions";
 import { neverDemand } from "typescript-misc";
@@ -14,7 +14,6 @@ export const FakerProvider = memo(
 
 /**
  * Consumes faker context.
- *
  * @returns Faker context.
  */
 export function useFaker(): faker.Facade {

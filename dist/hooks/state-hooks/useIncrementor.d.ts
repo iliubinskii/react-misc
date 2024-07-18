@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Incrementor hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful numeric value.
  */

@@ -1,5 +1,5 @@
 export * as CommonProps from "./CommonProps";
 export * from "./dom";
-export * from "./fullcalendar";
+export * from "./full-calendar";
 export * from "./mui";
 export * from "./react";

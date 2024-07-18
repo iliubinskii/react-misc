@@ -2,7 +2,6 @@ import type { CommonProps } from "../types";
 export declare const BusyStateProvider: import("../types").FunctionComponent<Props>;
 /**
  * Consumes busy state context.
- *
  * @returns Busy state.
  */
 export declare function useBusyState(): boolean;

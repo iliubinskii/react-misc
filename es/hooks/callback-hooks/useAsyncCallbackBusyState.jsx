@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Async callback hook.
- *
  * @param async - Async callback.
  * @param deps - Dependencies.
  * @returns Sync function.
@@ -14,14 +13,14 @@ export function useAsyncCallbackBusyState(async, deps) {
         const promise = memorizedAsync(...args);
         setCounter(prevCounter => prevCounter + 1);
         promise
-            // eslint-disable-next-line github/no-then, promise/prefer-await-to-then -- Ok
+            // eslint-disable-next-line github/no-then -- Ok
             .then(() => {
             setCounter(prevCounter => prevCounter - 1);
         })
-            // eslint-disable-next-line github/no-then, promise/prefer-await-to-then -- Ok
-            .catch((e) => {
+            // eslint-disable-next-line github/no-then -- Ok
+            .catch((err) => {
             setCounter(prevCounter => prevCounter - 1);
-            throw e;
+            throw err;
         });
     }, [memorizedAsync]);
     return [sync, counter > 0];

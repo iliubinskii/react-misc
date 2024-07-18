@@ -1,9 +1,8 @@
-import * as React from "react";
 import { fn, is } from "typescript-misc";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 /**
  * State hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful value.

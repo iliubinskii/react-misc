@@ -1,5 +1,5 @@
-import * as React from "react";
 import type { CommonProps } from "../types";
+import React from "react";
 import { memo } from "../functions";
 import { useLogger } from "../contexts";
 import { useRealEffect } from "../hooks";
@@ -17,7 +17,6 @@ export default memo("RenderTimeLogger", ({ children, name }: Props) => {
     log(`${name}: Rendered in ${time} ms`);
   }, []);
 
-  // eslint-disable-next-line react/jsx-no-useless-fragment -- Ok
   return <>{children}</>;
 });
 

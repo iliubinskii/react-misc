@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Boolean hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful boolean value.
  */

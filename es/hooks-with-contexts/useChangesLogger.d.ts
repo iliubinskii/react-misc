@@ -1,6 +1,5 @@
 /**
  * Changes logger hook.
- *
  * @param value - Value.
  * @param message - Message.
  * @returns Value.

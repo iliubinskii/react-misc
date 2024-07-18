@@ -1,7 +1,7 @@
-import * as React from "react";
+import React from "react";
+import type { booleanU } from "typescript-misc";
 /**
  * State hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful value.
@@ -11,11 +11,10 @@ export interface Config<T = readonly []> {
     readonly initialState: T;
     /**
      * Handles "OnSet" event.
-     *
      * @param state - State.
      */
-    readonly onSet?: (state: T) => void;
-    readonly resetOnInitialStateChange?: boolean;
+    readonly onSet?: ((state: T) => void) | undefined;
+    readonly resetOnInitialStateChange?: booleanU;
 }
 /**
  * @internal

@@ -1,5 +1,5 @@
-import * as React from "react";
 import { dictionary, neverDemand } from "typescript-misc";
+import React from "react";
 import { memo } from "../functions";
 export const LangProvider = memo("LangProvider", ({ children, definitions }) => {
     const context = React.useMemo(() => dictionary.Dictionary.create(definitions), [definitions]);
@@ -7,7 +7,6 @@ export const LangProvider = memo("LangProvider", ({ children, definitions }) => 
 });
 /**
  * Consumes lang context.
- *
  * @returns Lang context.
  */
 export function useLang() {

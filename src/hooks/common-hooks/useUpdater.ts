@@ -1,13 +1,11 @@
-import * as React from "react";
+import React from "react";
 
 /**
  * Updater hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  */
 export function useUpdater<T>(
-  // eslint-disable-next-line @typescript-eslint/no-invalid-void-type -- Ok
   effect: () => T extends void ? T : never,
   deps: React.DependencyList
 ): void {

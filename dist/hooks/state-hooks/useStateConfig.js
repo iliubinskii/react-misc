@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useStateConfig = void 0;
+exports.useStateConfig = useStateConfig;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
 const typescript_misc_1 = require("typescript-misc");
+const react_1 = tslib_1.__importDefault(require("react"));
 const common_hooks_1 = require("../common-hooks");
 /**
  * State hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful value.
@@ -15,15 +14,15 @@ const common_hooks_1 = require("../common-hooks");
 function useStateConfig(configFactory, deps) {
     const { initialState, onSet = typescript_misc_1.fn.noop, resetOnInitialStateChange = false } = 
     // eslint-disable-next-line react-hooks/exhaustive-deps -- Ok
-    React.useMemo(configFactory, deps);
-    const ref = React.useRef(initialState);
-    const [state, setState] = React.useState(initialState);
-    const resetState = React.useCallback(() => {
+    react_1.default.useMemo(configFactory, deps);
+    const ref = react_1.default.useRef(initialState);
+    const [state, setState] = react_1.default.useState(initialState);
+    const resetState = react_1.default.useCallback(() => {
         ref.current = initialState;
         setState(initialState);
         onSet(initialState);
     }, [initialState, onSet]);
-    const setStateWrapper = React.useCallback(value => {
+    const setStateWrapper = react_1.default.useCallback(value => {
         const normalized = typescript_misc_1.is.callable(value) ? value(ref.current) : value;
         if (normalized === ref.current) {
             // Already set
@@ -38,7 +37,6 @@ function useStateConfig(configFactory, deps) {
         if (resetOnInitialStateChange)
             setState(initialState);
     }, [initialState]);
-    return React.useMemo(() => [state, setStateWrapper, resetState, ref], [resetState, setStateWrapper, state]);
+    return react_1.default.useMemo(() => [state, setStateWrapper, resetState, ref], [resetState, setStateWrapper, state]);
 }
-exports.useStateConfig = useStateConfig;
 //# sourceMappingURL=useStateConfig.js.map

@@ -1,6 +1,5 @@
 /**
  * Deferred callback hook.
- *
  * @param callback - Callback.
  * @returns Deferred callback.
  */

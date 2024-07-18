@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { memo } from "../functions";
 import { useLogger } from "../contexts";
 import { useRealEffect } from "../hooks";
@@ -10,7 +10,6 @@ export default memo("RenderTimeLogger", ({ children, name }) => {
         const time = Math.round(t2 - t1).toLocaleString();
         log(`${name}: Rendered in ${time} ms`);
     }, []);
-    // eslint-disable-next-line react/jsx-no-useless-fragment -- Ok
     return <>{children}</>;
 });
 //# sourceMappingURL=RenderTimeLogger.jsx.map

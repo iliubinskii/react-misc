@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { o } from "typescript-misc";
 import { useRealEffect } from "../common-hooks";
 /**
  * Enumeration hook.
- *
  * @param initialState - Initial state.
  * @param enumeration - Enumeration.
  * @returns Stateful enumeration value.

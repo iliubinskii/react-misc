@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 /**
  * Toggle hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful boolean value.
  */

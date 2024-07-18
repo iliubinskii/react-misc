@@ -1,9 +1,8 @@
-import * as React from "react";
 import { useRealEffect, useResource } from "../common-hooks";
+import React from "react";
 
 /**
  * Delayed callback hook.
- *
  * @param callback - Callback.
  * @param deps - Dependencies.
  * @param timeout - Timeout.
@@ -82,7 +81,6 @@ export interface Immediate {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple = readonly [
   DelayedCallback,
   Immediate,

@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from "react";
 /**
  * Delayed effect hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  * @param timeout - Timeout.

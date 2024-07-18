@@ -1,7 +1,6 @@
 import type { FunctionComponent, FunctionComponentNoProps } from "../types";
 /**
  * Creates memorized component.
- *
  * @param displayName - Display name.
  * @param functionComponent - Functional component.
  * @returns Memorized component.
@@ -9,7 +8,6 @@ import type { FunctionComponent, FunctionComponentNoProps } from "../types";
 export declare function memo(displayName: string, functionComponent: FunctionComponentNoProps): FunctionComponentNoProps;
 /**
  * Creates memorized component.
- *
  * @param displayName - Display name.
  * @param functionComponent - Functional component.
  * @returns Memorized component.

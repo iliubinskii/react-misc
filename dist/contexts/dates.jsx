@@ -1,13 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useDates = exports.DatesProvider = void 0;
+exports.DatesProvider = void 0;
+exports.useDates = useDates;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
 const typescript_misc_1 = require("typescript-misc");
+const react_1 = tslib_1.__importDefault(require("react"));
 const functions_1 = require("../functions");
 exports.DatesProvider = (0, functions_1.memo)("DatesProvider", ({ children, locale, weekStartsOn }) => {
-    const datetime = React.useMemo(() => (0, typescript_misc_1.dateFnsWrapper)({ locale }), [locale]);
-    const context = React.useMemo(() => {
+    const datetime = react_1.default.useMemo(() => (0, typescript_misc_1.dateFnsWrapper)({ locale }), [locale]);
+    const context = react_1.default.useMemo(() => {
         const d = datetime.create().setStartOfDay();
         return {
             dayAfterTomorrow: d.add(2, typescript_misc_1.TimeUnit.days).toString(),
@@ -35,12 +36,10 @@ exports.DatesProvider = (0, functions_1.memo)("DatesProvider", ({ children, loca
 });
 /**
  * Consumes dates context.
- *
  * @returns Dates context.
  */
 function useDates() {
-    return React.useContext(DatetimeContext);
+    return react_1.default.useContext(DatetimeContext);
 }
-exports.useDates = useDates;
-const DatetimeContext = React.createContext((0, typescript_misc_1.neverDemand)());
+const DatetimeContext = react_1.default.createContext((0, typescript_misc_1.neverDemand)());
 //# sourceMappingURL=dates.jsx.map

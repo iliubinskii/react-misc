@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import type { unknowns } from "typescript-misc";
 
 /**
  * Async callback hook.
- *
  * @param async - Async callback.
  * @param deps - Dependencies.
  * @returns Sync function.
@@ -22,7 +21,6 @@ export function useAsyncCallback<T extends unknowns>(
 export interface Sync<T extends unknowns> {
   /**
    * Sync function.
-   *
    * @param args - Arguments.
    */
   (...args: T): void;

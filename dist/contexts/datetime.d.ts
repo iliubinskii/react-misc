@@ -4,7 +4,6 @@ import type { datetime } from "typescript-misc";
 export declare const DatetimeProvider: import("../types").FunctionComponent<Props>;
 /**
  * Consumes datetime context.
- *
  * @returns Datetime context.
  */
 export declare function useDatetime(): datetime.Facade;

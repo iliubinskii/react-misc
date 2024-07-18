@@ -1,5 +1,5 @@
-import * as React from "react";
 import type { CommonProps } from "../types";
+import React from "react";
 import { memo } from "../functions";
 
 export const BusyStateProvider = memo(
@@ -17,7 +17,6 @@ export const BusyStateProvider = memo(
 
 /**
  * Consumes busy state context.
- *
  * @returns Busy state.
  */
 export function useBusyState(): boolean {

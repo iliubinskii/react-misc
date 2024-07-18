@@ -3,7 +3,6 @@ import type { strings } from "typescript-misc";
 export declare const LoggerProvider: import("../types").FunctionComponent<Props>;
 /**
  * Consumes logger context.
- *
  * @returns Logger context.
  */
 export declare function useLogger(): Context;
@@ -13,13 +12,11 @@ export declare function useLogger(): Context;
 export interface Context {
     /**
      * Returns messages.
-     *
      * @returns Messages.
      */
     readonly getMessages: () => strings;
     /**
      * Adds messages to the log.
-     *
      * @param messages - Messages.
      */
     readonly log: (...messages: strings) => void;
@@ -30,7 +27,6 @@ export interface Context {
 export interface Props extends CommonProps.Children {
     /**
      * External logger.
-     *
      * @param messages - Messages.
      */
     readonly logger?: ((...messages: strings) => void) | undefined;

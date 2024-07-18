@@ -1,7 +1,7 @@
-import * as React from "react";
 import { TimeUnit, dateFnsWrapper, neverDemand } from "typescript-misc";
 import type { CommonProps } from "../types";
 import type { Locale } from "date-fns";
+import React from "react";
 import { memo } from "../functions";
 
 export const DatesProvider = memo(
@@ -43,7 +43,6 @@ export const DatesProvider = memo(
 
 /**
  * Consumes dates context.
- *
  * @returns Dates context.
  */
 export function useDates(): Context {

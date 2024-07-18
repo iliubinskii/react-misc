@@ -1,10 +1,10 @@
-import * as React from "react";
+import React from "react";
+import type { booleanU } from "typescript-misc";
 import { fn } from "typescript-misc";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Boolean hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful boolean value.
@@ -103,22 +103,21 @@ export function useBooleanConfig(
 }
 
 export interface Config {
-  readonly initialState?: boolean;
+  readonly initialState?: booleanU;
   /**
    * Handles "OnSet" event.
-   *
    * @param value - Value.
    */
-  readonly onSet?: (value: boolean) => void;
+  readonly onSet?: ((value: boolean) => void) | undefined;
   /**
    * Handles "OnSetFalse" event.
    */
-  readonly onSetFalse?: () => void;
+  readonly onSetFalse?: (() => void) | undefined;
   /**
    * Handles "OnSetTrue" event.
    */
-  readonly onSetTrue?: () => void;
-  readonly resetOnInitialStateChange?: boolean;
+  readonly onSetTrue?: (() => void) | undefined;
+  readonly resetOnInitialStateChange?: booleanU;
 }
 
 /**
@@ -184,7 +183,6 @@ export interface ToggleNoEvent {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple = readonly [
   boolean,
   SetTrue,

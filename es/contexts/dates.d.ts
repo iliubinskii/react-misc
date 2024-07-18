@@ -3,7 +3,6 @@ import type { Locale } from "date-fns";
 export declare const DatesProvider: import("../types").FunctionComponent<Props>;
 /**
  * Consumes dates context.
- *
  * @returns Dates context.
  */
 export declare function useDates(): Context;

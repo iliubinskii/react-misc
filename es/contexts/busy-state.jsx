@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { memo } from "../functions";
 export const BusyStateProvider = memo("BusyStateProvider", ({ busy, children }) => {
     const previousBusy = useBusyState();
@@ -8,7 +8,6 @@ export const BusyStateProvider = memo("BusyStateProvider", ({ busy, children }) 
 });
 /**
  * Consumes busy state context.
- *
  * @returns Busy state.
  */
 export function useBusyState() {

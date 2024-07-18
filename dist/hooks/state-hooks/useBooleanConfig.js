@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useBooleanConfig = void 0;
+exports.useBooleanConfig = useBooleanConfig;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 const typescript_misc_1 = require("typescript-misc");
 const common_hooks_1 = require("../common-hooks");
 /**
  * Boolean hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful boolean value.
@@ -15,10 +14,10 @@ const common_hooks_1 = require("../common-hooks");
 function useBooleanConfig(configFactory, deps) {
     const { initialState = false, onSet = typescript_misc_1.fn.noop, onSetFalse = typescript_misc_1.fn.noop, onSetTrue = typescript_misc_1.fn.noop, resetOnInitialStateChange = false } = 
     // eslint-disable-next-line react-hooks/exhaustive-deps -- Ok
-    React.useMemo(configFactory, deps);
-    const ref = React.useRef(initialState);
-    const [state, setState] = React.useState(initialState);
-    const setTrue = React.useCallback(() => {
+    react_1.default.useMemo(configFactory, deps);
+    const ref = react_1.default.useRef(initialState);
+    const [state, setState] = react_1.default.useState(initialState);
+    const setTrue = react_1.default.useCallback(() => {
         if (ref.current) {
             // Already true
         }
@@ -29,11 +28,11 @@ function useBooleanConfig(configFactory, deps) {
             onSetTrue();
         }
     }, [onSet, onSetTrue]);
-    const setTrueNoEvent = React.useCallback(() => {
+    const setTrueNoEvent = react_1.default.useCallback(() => {
         ref.current = true;
         setState(true);
     }, []);
-    const setFalse = React.useCallback(() => {
+    const setFalse = react_1.default.useCallback(() => {
         if (ref.current) {
             ref.current = false;
             setState(false);
@@ -41,11 +40,11 @@ function useBooleanConfig(configFactory, deps) {
             onSetFalse();
         }
     }, [onSet, onSetFalse]);
-    const setFalseNoEvent = React.useCallback(() => {
+    const setFalseNoEvent = react_1.default.useCallback(() => {
         ref.current = false;
         setState(false);
     }, []);
-    const toggle = React.useCallback(() => {
+    const toggle = react_1.default.useCallback(() => {
         ref.current = !ref.current;
         setState(prevState => !prevState);
         if (ref.current) {
@@ -57,7 +56,7 @@ function useBooleanConfig(configFactory, deps) {
             onSetFalse();
         }
     }, [onSet, onSetFalse, onSetTrue]);
-    const toggleNoEvent = React.useCallback(() => {
+    const toggleNoEvent = react_1.default.useCallback(() => {
         ref.current = !ref.current;
         setState(prevState => !prevState);
     }, []);
@@ -65,7 +64,7 @@ function useBooleanConfig(configFactory, deps) {
         if (resetOnInitialStateChange)
             setState(initialState);
     }, [initialState]);
-    return React.useMemo(() => [
+    return react_1.default.useMemo(() => [
         state,
         setTrue,
         setFalse,
@@ -84,5 +83,4 @@ function useBooleanConfig(configFactory, deps) {
         toggleNoEvent
     ]);
 }
-exports.useBooleanConfig = useBooleanConfig;
 //# sourceMappingURL=useBooleanConfig.js.map

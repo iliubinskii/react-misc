@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useResource } from "../common-hooks";
 
 /**
  * Async interval hook.
- *
  * @param async - Async callback.
  * @param deps - Dependencies.
  * @param interval - Interval.
@@ -17,6 +16,7 @@ export function useAsyncInterval(
   const memorizedAsync = React.useCallback(async, deps);
 
   useResource(() => {
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises -- Ok
     const handle = setInterval(memorizedAsync, interval);
 
     return () => {

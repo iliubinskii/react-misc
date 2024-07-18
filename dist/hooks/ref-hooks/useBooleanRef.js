@@ -1,26 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useBooleanRef = void 0;
+exports.useBooleanRef = useBooleanRef;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 /**
  * Boolean ref hook.
- *
  * @param initialValue - Initial value.
  * @returns Boolean ref.
  */
 function useBooleanRef(initialValue = false) {
-    const value = React.useRef(initialValue);
-    const setTrue = React.useCallback(() => {
+    const value = react_1.default.useRef(initialValue);
+    const setTrue = react_1.default.useCallback(() => {
         value.current = true;
     }, []);
-    const setFalse = React.useCallback(() => {
+    const setFalse = react_1.default.useCallback(() => {
         value.current = false;
     }, []);
-    const toggle = React.useCallback(() => {
+    const toggle = react_1.default.useCallback(() => {
         value.current = !value.current;
     }, []);
-    return React.useMemo(() => [value, setTrue, setFalse, toggle], [setFalse, setTrue, toggle, value]);
+    return react_1.default.useMemo(() => [value, setTrue, setFalse, toggle], [setFalse, setTrue, toggle, value]);
 }
-exports.useBooleanRef = useBooleanRef;
 //# sourceMappingURL=useBooleanRef.js.map

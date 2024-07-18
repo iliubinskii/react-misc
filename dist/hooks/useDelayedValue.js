@@ -1,11 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useDelayedValue = void 0;
+exports.useDelayedValue = useDelayedValue;
 const common_hooks_1 = require("./common-hooks");
 const state_hooks_1 = require("./state-hooks");
 /**
  * Delayed value hook.
- *
  * @param value - Value.
  * @param timeout - Timeout.
  * @param immediate - A list of values that should be set immediately.
@@ -29,5 +28,4 @@ function useDelayedValue(value, timeout, immediate = []) {
     }, [delayedValueRef, immediate, setDelayedValue, timeout, value]);
     return delayedValue;
 }
-exports.useDelayedValue = useDelayedValue;
 //# sourceMappingURL=useDelayedValue.js.map

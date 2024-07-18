@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { useLogger } from "../contexts";
 /**
  * Changes logger hook.
- *
  * @param value - Value.
  * @param message - Message.
  * @returns Value.

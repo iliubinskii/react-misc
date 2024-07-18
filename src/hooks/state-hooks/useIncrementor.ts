@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 
 /**
  * Incrementor hook.
- *
  * @param initialState - Initial state.
  * @returns Stateful numeric value.
  */
@@ -39,7 +38,6 @@ export interface Incrementor {
 /**
  * @internal
  */
-// eslint-disable-next-line misc/typescript/no-multi-type-tuples -- Ok
 export type Tuple = readonly [
   number,
   Incrementor,

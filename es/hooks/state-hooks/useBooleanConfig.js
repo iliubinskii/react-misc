@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { fn } from "typescript-misc";
 import { useRealEffect } from "../common-hooks";
 /**
  * Boolean hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful boolean value.

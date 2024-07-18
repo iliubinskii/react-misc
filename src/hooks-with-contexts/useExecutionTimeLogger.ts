@@ -1,9 +1,8 @@
-import * as React from "react";
+import React from "react";
 import { useLogger } from "../contexts";
 
 /**
  * Execution time logger hook.
- *
  * @returns Execution time logger.
  */
 export function useExecutionTimeLogger(): (message: string) => () => void {

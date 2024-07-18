@@ -3,7 +3,6 @@ import type { CommonProps } from "../types";
 export declare const UniqueIdProvider: import("../types").FunctionComponent<Props>;
 /**
  * Consumes unique ID context.
- *
  * @returns Unique ID context.
  */
 export declare function useUniqueId(): Uuid;
@@ -19,7 +18,6 @@ export interface Props extends CommonProps.Children {
 export interface Uuid {
     /**
      * Generates unique ID.
-     *
      * @returns Unique ID.
      */
     (): string;

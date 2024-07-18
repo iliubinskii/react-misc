@@ -1,7 +1,7 @@
-import * as React from "react";
 import { dateFnsWrapper, neverDemand } from "typescript-misc";
 import type { CommonProps } from "../types";
 import type { Locale } from "date-fns";
+import React from "react";
 import type { datetime } from "typescript-misc";
 import { memo } from "../functions";
 
@@ -20,7 +20,6 @@ export const DatetimeProvider = memo(
 
 /**
  * Consumes datetime context.
- *
  * @returns Datetime context.
  */
 export function useDatetime(): datetime.Facade {

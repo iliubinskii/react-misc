@@ -1,5 +1,5 @@
-import * as React from "react";
 import { fn, neverDemand } from "typescript-misc";
+import React from "react";
 import { consts } from "../core";
 import { memo } from "../functions";
 export const LoggerProvider = memo("LoggerProvider", ({ children, logger = fn.noop }) => {
@@ -9,14 +9,15 @@ export const LoggerProvider = memo("LoggerProvider", ({ children, logger = fn.no
         messages.current = [...messages.current, ...nextMessages].slice(-size);
         logger(...nextMessages);
     }, [logger]);
-    const context = React.useMemo(() => ({ getMessages, log }), [getMessages, log]);
+    const context = React.useMemo(() => {
+        return { getMessages, log };
+    }, [getMessages, log]);
     return (<LoggerContext.Provider value={context}>
         {children}
       </LoggerContext.Provider>);
 });
 /**
  * Consumes logger context.
- *
  * @returns Logger context.
  */
 export function useLogger() {

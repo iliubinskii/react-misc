@@ -1,9 +1,8 @@
-import * as React from "react";
 import { fn, o } from "typescript-misc";
+import React from "react";
 import { useRealEffect } from "../common-hooks";
 /**
  * Enumeration hook.
- *
  * @param configFactory - Configuration factory.
  * @param deps - Dependencies.
  * @returns Stateful enumeration value.

@@ -1,19 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useInterval = void 0;
+exports.useInterval = useInterval;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 const common_hooks_1 = require("../common-hooks");
 /**
  * Interval hook.
- *
  * @param callback - Callback.
  * @param deps - Dependencies.
  * @param interval - Interval.
  */
 function useInterval(callback, deps, interval) {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- Ok
-    const memorizedCallback = React.useCallback(callback, deps);
+    const memorizedCallback = react_1.default.useCallback(callback, deps);
     (0, common_hooks_1.useResource)(() => {
         const handle = setInterval(memorizedCallback, interval);
         return () => {
@@ -21,5 +20,4 @@ function useInterval(callback, deps, interval) {
         };
     }, [interval, memorizedCallback]);
 }
-exports.useInterval = useInterval;
 //# sourceMappingURL=useInterval.js.map

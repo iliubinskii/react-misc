@@ -1,19 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useUpdater = void 0;
+exports.useUpdater = useUpdater;
 const tslib_1 = require("tslib");
-const React = tslib_1.__importStar(require("react"));
+const react_1 = tslib_1.__importDefault(require("react"));
 /**
  * Updater hook.
- *
  * @param effect - Imperative function.
  * @param deps - Dependencies.
  */
-function useUpdater(
-// eslint-disable-next-line @typescript-eslint/no-invalid-void-type -- Ok
-effect, deps) {
+function useUpdater(effect, deps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- Ok
-    React.useEffect(effect, deps);
+    react_1.default.useEffect(effect, deps);
 }
-exports.useUpdater = useUpdater;
 //# sourceMappingURL=useUpdater.js.map
