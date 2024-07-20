@@ -6,14 +6,14 @@
 - [Installation](#installation)
 - [Modules](#modules)
 
-## <a id="overview"></a>Overview
+## Overview
 
 React library.
 
-## <a id="installation"></a>Installation
+## Installation
 
 ```sh
 npm install react-misc
 ```
 
-## <a id="modules"></a>Modules
+## Modules

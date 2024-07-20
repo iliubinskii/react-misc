@@ -13,7 +13,7 @@ const config = {
     browser: true,
     es2022: true
   },
-  extends: ["./.eslintrc.base.cjs", "./.eslintrc.react.cjs"],
+  extends: ["union", "union/react"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: { jsx: true },
@@ -28,7 +28,7 @@ const config = {
         cspell: {
           words:
             // @sorted
-            ["decrementor", "escompat", "packagejson", "pressable", "sonarjs"]
+            ["cjsx", "decrementor", "mjsx", "packagejson", "pressable"]
         }
       }
     ],
