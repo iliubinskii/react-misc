@@ -1,3 +1,23 @@
+const customHooks =
+  // @sorted
+  [
+    "useAsyncCallback",
+    "useAsyncCallbackBusyState",
+    "useAsyncInterval",
+    "useAsyncUpdater",
+    "useBooleanConfig",
+    "useDeferredCallback",
+    "useDeferredUpdater",
+    "useDelayedCallback",
+    "useDelayedUpdater",
+    "useDerivedValue",
+    "useEnumConfig",
+    "useInterval",
+    "useResource",
+    "useStateConfig",
+    "useUpdater"
+  ];
+
 /**
  * @type {import("eslint").Linter.Config}
  */
@@ -33,7 +53,11 @@ const config = {
       }
     ],
     "@typescript-eslint/no-namespace": "off",
-    "etc/no-internal": "off"
+    "etc/no-internal": "off",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      { additionalHooks: `^(${customHooks.join("|")})$` }
+    ]
   }
 };
 
